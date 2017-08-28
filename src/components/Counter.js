@@ -1,16 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 export default function Counter(props) {
-  console.log('in counter: ', props);
-
+  Counter.propTypes = {
+    currentVal: PropTypes.number
+  }
 
   return (
     <div>
-      <div onClick={()=> props.updateCounter(props.currentVal)}>minus one</div>
+      {props.currentVal > 0 &&
+      <div onClick={()=> props.updateCounter('dec')}>minus one</div>}
       <div>
         {props.currentVal}
       </div>
-      <div onClick={() => props.updateCounter(props.currentVal)}>plus one</div>
+      <div onClick={() => props.updateCounter('inc')}>plus one</div>
     </div>
   );
 }

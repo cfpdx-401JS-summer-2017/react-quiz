@@ -2,23 +2,29 @@ import React, { Component } from 'react';
 import Counter from '../components/Counter';
 
 class CounterContainer extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      increment: 1,
+      increment: 'inc',
       currentVal: 0
     };
   }
 
   updateCounter(target) {
-    console.log('in update counter: ', target)
-    this.setState({currentVal: target.value})
-
+    let currV = this.state.currentVal;
+    target === 'inc' ? currV++ : currV--;
+    this.setState({ currentVal: currV });
   }
 
   render() {
-    const { increment, currentVal, updateCounter } = this.state;
-    return <Counter currentVal={currentVal} increment={increment} updateCounter={target =>this.updateCounter(target)}/>;
+    const { increment, currentVal } = this.state;
+    return (
+      <Counter
+        currentVal={currentVal}
+        increment={increment}
+        updateCounter={target => this.updateCounter(target)}
+      />
+    );
   }
 }
 

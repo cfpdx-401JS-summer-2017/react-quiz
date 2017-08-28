@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot when the value === 0 1`] = `
+<div>
+  <div>
+    0
+  </div>
+  <div
+    onClick={[Function]}
+  >
+    plus one
+  </div>
+</div>
+`;
+
+exports[`renders a snapshot when the value is > 0 1`] = `
+<div>
+  <div
+    onClick={[Function]}
+  >
+    minus one
+  </div>
+  <div>
+    2
+  </div>
+  <div
+    onClick={[Function]}
+  >
+    plus one
+  </div>
+</div>
+`;
