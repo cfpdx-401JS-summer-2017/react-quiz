@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      count: 0
+    }
+  }
+
+  Increment = value => {
+    this.setState((state) => {
+      return {count: state.count+value}
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Really Great Counter</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <main>
+          {this.state.count>0 &&
+            <button onClick={() => this.Increment(-1)}>-</button>
+          }
+          <h1>{this.state.count}</h1>
+          <button onClick={() => this.Increment(1)}>+</button>
+        </main>
       </div>
     );
   }
