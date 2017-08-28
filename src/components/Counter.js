@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-export function Counter(props) {
+export default function Counter(props) {
 
-    const { counter, onAdd, onSub } = this.props;
     render() {
+        const { counter, onAdd, onSub } = this.props;
         return (
             <div>
                 {counter}
@@ -12,5 +12,4 @@ export function Counter(props) {
             </div>
         );
     }
-
 }
