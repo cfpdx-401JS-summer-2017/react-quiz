@@ -6,11 +6,11 @@ export default function Counter(props) {
 
   return (
     <div>
-      <div onClick={target => props.updateCounter(target)}>minus one</div>
+      <div onClick={()=> props.updateCounter(props.currentVal)}>minus one</div>
       <div>
         {props.currentVal}
       </div>
-      <div onClick={target => props.updateCounter(target)}>plus one</div>
+      <div onClick={() => props.updateCounter(props.currentVal)}>plus one</div>
     </div>
   );
 }
