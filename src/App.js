@@ -22,11 +22,11 @@ class App extends Component {
           <h2>Really Great Counter</h2>
         </div>
         <main>
+          <button onClick={() => this.Increment(1)}>+</button>
+          <h1>{this.state.count}</h1>
           {this.state.count>0 &&
             <button onClick={() => this.Increment(-1)}>-</button>
           }
-          <h1>{this.state.count}</h1>
-          <button onClick={() => this.Increment(1)}>+</button>
         </main>
       </div>
     );
