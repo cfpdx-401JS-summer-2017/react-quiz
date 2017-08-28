@@ -16,7 +16,7 @@ export default class CounterContainer extends Component {
     let newCount = oldCount + increment;
     this.setState({ count: newCount });
 
-    if (this.state.count > `) this.setState({ minusDisabled: false });
+    if (this.state.count > 1) this.setState({ minusDisabled: false });
     else this.setState({ minusDisabled: true });
   }
 
