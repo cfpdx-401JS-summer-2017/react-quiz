@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.svg"
+    />
+    <h2>
+      Welcome to React
+    </h2>
+  </div>
+  <div>
+    <button
+      disabled={true}
+      onClick={[Function]}
+    >
+       - 
+    </button>
+    <p>
+      0
+    </p>
+    <button
+      onClick={[Function]}
+    >
+       + 
+    </button>
+  </div>
+</div>
+`;
