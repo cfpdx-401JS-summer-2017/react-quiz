@@ -32,7 +32,7 @@ class App extends Component {
               >-
             </button>
             <button 
-              onClick={() =>  this.setState({i:this.state.i+1})}
+              onClick={() =>  this.setState({{increment:this.state.increment+1})}
               style={{padding: '10px',fontSize:20}}
             >+
             </button>
